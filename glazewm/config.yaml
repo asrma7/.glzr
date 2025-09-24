@@ -34,13 +34,13 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: "5px"
+  inner_gap: "1px"
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "41px"
+    top: "35px"
     right: "0px"
-    bottom: "0px"
+    bottom: "1px"
     left: "0px"
 
 window_effects:
@@ -115,6 +115,7 @@ window_rules:
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: "zebar" }
+      - window_process: { equals: "mstsc" }
       - window_process: { equals: "Electron" }
       - window_process: { equals: "electron" }
       - window_process: { equals: "iCoder" }

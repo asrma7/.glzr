@@ -4,23 +4,73 @@
   "version": "0.0.0",
   "description": "Fully featured topbar using React+Vite, Tailwind & Framer Motion. ",
   "tags": [],
-  "previewImages": ["resources/preview-image-1.png"],
+  "previewImages": [
+    "resources/preview-image-1.png",
+    "resources/preview-image-2.png",
+    "resources/preview-image-3.png"
+  ],
   "repositoryUrl": "https://github.com/mushfikurr/overline-zebar",
   "widgets": [
     {
-      "name": "overline",
-      "htmlPath": "./dist/index.html",
+      "name": "main",
+      "htmlPath": "./widgets/main/index.html",
       "zOrder": "normal",
       "shownInTaskbar": false,
       "focused": false,
       "resizable": false,
       "transparent": true,
       "includeFiles": [
-        "dist/index.html",
-        "dist/assets/**",
-        "dist/config.json",
-        "dist/geistMono/**",
-        "README.md"
+        "widgets/main/index.html",
+        "widgets/main/assets/**",
+        "widgets/main/config.json",
+        "widgets/main/geistMono/**",
+        "widgets/main/README.md"
+      ],
+      "caching": {
+        "defaultDuration": 604800,
+        "rules": []
+      },
+      "privileges": {
+        "shellCommands": [
+          {
+            "program": "shutdown",
+            "argsRegex": ".*"
+          }
+        ]
+      },
+      "presets": [
+        {
+          "name": "default",
+          "anchor": "top_center",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "width": "100%",
+          "height": "34px",
+          "monitorSelection": {
+            "type": "all"
+          },
+          "dockToEdge": {
+            "enabled": false,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "system-stats",
+      "htmlPath": "./widgets/system-stats/index.html",
+      "zOrder": "normal",
+      "shownInTaskbar": false,
+      "focused": true,
+      "resizable": false,
+      "transparent": true,
+      "includeFiles": [
+        "widgets/system-stats/index.html",
+        "widgets/system-stats/assets/**",
+        "widgets/system-stats/config.json",
+        "widgets/system-stats/geistMono/**",
+        "widgets/system-stats/README.md"
       ],
       "caching": {
         "defaultDuration": 604800,
@@ -34,11 +84,98 @@
           "name": "default",
           "anchor": "top_left",
           "offsetX": "0px",
-          "offsetY": "0px",
-          "width": "100%",
-          "height": "40px",
+          "offsetY": "4px",
+          "width": "400px",
+          "height": "400px",
           "monitorSelection": {
             "type": "all"
+          },
+          "dockToEdge": {
+            "enabled": false,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "script-launcher",
+      "htmlPath": "./widgets/script-launcher/index.html",
+      "zOrder": "normal",
+      "shownInTaskbar": false,
+      "focused": true,
+      "resizable": false,
+      "transparent": true,
+      "includeFiles": [
+        "widgets/script-launcher/index.html",
+        "widgets/script-launcher/assets/**",
+        "widgets/script-launcher/config.json",
+        "widgets/script-launcher/geistMono/**",
+        "widgets/script-launcher/README.md"
+      ],
+      "caching": {
+        "defaultDuration": 604800,
+        "rules": []
+      },
+      "privileges": {
+        "shellCommands": [
+          {
+            "program": "shutdown",
+            "argsRegex": ".*"
+          }
+        ]
+      },
+      "presets": [
+        {
+          "name": "default",
+          "anchor": "top_left",
+          "offsetX": "0px",
+          "offsetY": "0px",
+          "width": "400px",
+          "height": "400px",
+          "monitorSelection": {
+            "type": "primary"
+          },
+          "dockToEdge": {
+            "enabled": false,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "config-widget",
+      "htmlPath": "./widgets/config-widget/index.html",
+      "zOrder": "normal",
+      "shownInTaskbar": true,
+      "focused": true,
+      "resizable": true,
+      "transparent": true,
+      "includeFiles": [
+        "widgets/config-widget/index.html",
+        "widgets/config-widget/assets/**",
+        "widgets/config/config-widget.json",
+        "widgets/config/geistMono/**",
+        "widgets/config-widget/README.md"
+      ],
+      "caching": {
+        "defaultDuration": 604800,
+        "rules": []
+      },
+      "privileges": {
+        "shellCommands": []
+      },
+      "presets": [
+        {
+          "name": "default",
+          "anchor": "center",
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "width": "1100px",
+          "height": "720px",
+          "monitorSelection": {
+            "type": "primary"
           },
           "dockToEdge": {
             "enabled": false,

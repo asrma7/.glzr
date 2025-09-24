@@ -5,6 +5,11 @@
       "pack": "overline-zebar",
       "widget": "overline",
       "preset": "default"
+    },
+    {
+      "pack": "overline-zebar",
+      "widget": "main",
+      "preset": "default"
     }
   ]
 }
