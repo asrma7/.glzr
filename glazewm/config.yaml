@@ -111,9 +111,14 @@ workspaces:
   - name: "9"
 
 window_rules:
+  - commands: ["set-floating"]
+    match:
+      # Makes windows floating by default.
+      - window_process: { equals: "sideloadly" }
+
   - commands: ["ignore"]
     match:
-      # Ignores any Zebar windows.
+      # Ignores windows.
       - window_process: { equals: "zebar" }
       - window_process: { equals: "mstsc" }
       - window_process: { equals: "Electron" }
