@@ -2,6 +2,11 @@
 #SingleInstance Force
 ; #NoTrayIcon
 
+
+; ============================================================
+; App launchers
+; ============================================================
+
 !+Enter::
 {
     Run "wezterm-gui"
@@ -14,12 +19,21 @@
 
 !+n::
 {
-    Run "C:\Users\ashut\scoop\shims\neovide.exe"
+    Run "C:\Users\Ashutosh Sharma\scoop\shims\neovide.exe"
 }
 
 !+v::
 {
-    Run "C:\Users\ashut\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+    Run "C:\Users\Ashutosh Sharma\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 }
 
-^!r:: Reload
+; Reload AutoHotkey script
+^!r::
+{
+    Reload
+}
+
+#x::
+{
+    Run "C:\Users\Ashutosh Sharma\.glzr\PowerMenu.ahk"
+}
